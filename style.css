@@ -1,4 +1,4 @@
-/* Basic Reset and Body */
+/* === Reset and Base Styles === */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,11 +11,10 @@ body {
   color: #ccc;
   line-height: 1.6;
   overflow-x: hidden;
-  position: relative;
   min-height: 100vh;
 }
 
-/* Particles container (full screen) */
+/* === Particles Background === */
 #particles-js {
   position: fixed;
   width: 100%;
@@ -26,7 +25,7 @@ body {
   pointer-events: none;
 }
 
-/* Header */
+/* === Header === */
 header {
   position: relative;
   z-index: 10;
@@ -46,13 +45,11 @@ header h1 {
   margin-bottom: 0.6rem;
 }
 
-/* Marquee styles */
+/* === Marquee === */
 .marquee-container {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  box-sizing: border-box;
-  position: relative;
   border-top: 1px solid #00ffff44;
   border-bottom: 1px solid #00ffff44;
   padding: 0.3rem 0;
@@ -60,13 +57,7 @@ header h1 {
 
 .marquee {
   display: flex;
-  white-space: nowrap;
   animation: marqueeAnimation 20s linear infinite;
-}
-
-.marquee-content {
-  display: inline-block;
-  white-space: nowrap;
 }
 
 .marquee-content span {
@@ -79,15 +70,11 @@ header h1 {
 }
 
 @keyframes marqueeAnimation {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-/* Navigation */
+/* === Navigation === */
 nav {
   position: fixed;
   top: 1rem;
@@ -110,7 +97,6 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: 600;
-  user-select: none;
 }
 
 .dropbtn:hover {
@@ -121,7 +107,7 @@ nav {
   display: none;
   position: absolute;
   background-color: #121212dd;
-  min-width: 120px;
+  min-width: 150px;
   border: 1px solid #00ffff55;
   border-radius: 8px;
   box-shadow: 0 0 12px #00ffff88;
@@ -147,7 +133,7 @@ nav {
   display: block;
 }
 
-/* Full-screen welcome section */
+/* === Welcome Section === */
 .full-screen {
   display: flex;
   flex-direction: column;
@@ -168,10 +154,9 @@ nav {
   font-size: 2.8rem;
   color: #00ffffcc;
   cursor: pointer;
-  user-select: none;
-  text-decoration: none;
   animation: bounce 2.5s infinite;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .scroll-down:hover {
@@ -183,7 +168,7 @@ nav {
   50% { transform: translateY(12px); }
 }
 
-/* About Section */
+/* === About Section === */
 .about-section {
   max-width: 900px;
   margin: 3rem auto;
@@ -194,9 +179,6 @@ nav {
   display: flex;
   gap: 2rem;
   align-items: center;
-  color: #ccc;
-  position: relative;
-  z-index: 2;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease, transform 1s ease;
@@ -208,7 +190,7 @@ nav {
 }
 
 .about-text {
-  flex: 1 1 55%;
+  flex: 1;
 }
 
 .about-text h2 {
@@ -220,7 +202,7 @@ nav {
 
 .about-text p {
   font-size: 1.1rem;
-  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
 .highlight {
@@ -228,8 +210,23 @@ nav {
   font-weight: 600;
 }
 
+.quick-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.fact {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  color: #00ffffcc;
+}
+
 .about-image {
-  flex: 1 1 40%;
+  flex-shrink: 0;
   max-width: 320px;
   border-radius: 20px;
   overflow: hidden;
@@ -239,22 +236,19 @@ nav {
 .about-image img {
   width: 100%;
   height: auto;
-  display: block;
   border-radius: 20px;
   object-fit: cover;
 }
 
-/* Preview sections styling */
+/* === Preview Sections (Hobbies & Achievements) === */
 .preview-section {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 3rem auto;
   background-color: #1a1a1acc;
   padding: 2rem 2.5rem;
   border-radius: 16px;
   box-shadow: 0 0 20px #00ffff44;
   text-align: center;
-  position: relative;
-  z-index: 2;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease, transform 1s ease;
@@ -283,7 +277,7 @@ nav {
   background-color: #222222cc;
   border-radius: 12px;
   padding: 1.5rem 2rem;
-  width: 300px;
+  width: 280px;
   box-shadow: 0 0 10px #00ffff33;
   transition: box-shadow 0.3s ease;
   color: #ccc;
@@ -305,7 +299,7 @@ nav {
   line-height: 1.4;
 }
 
-/* Circular arrow button */
+/* === Circle Button === */
 .circle-btn {
   display: inline-flex;
   justify-content: center;
@@ -321,8 +315,6 @@ nav {
   text-decoration: none;
   box-shadow: 0 0 14px #00ffff55;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  user-select: none;
 }
 
 .circle-btn:hover {
@@ -331,7 +323,34 @@ nav {
   box-shadow: 0 0 25px #00ffffaa;
 }
 
-/* Footer */
+/* === Hobby Cards (for hobbies.html) === */
+.hobby-card {
+  background-color: #1a1a1acc;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 16px #00ffff33;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  color: #ccc;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.hobby-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hobby-icon {
+  font-size: 2.5rem;
+  color: #00ffff;
+  margin-top: 0.3rem;
+}
+
+/* === Footer === */
 footer {
   text-align: center;
   padding: 1rem 0 3rem;
@@ -341,7 +360,22 @@ footer {
   z-index: 2;
 }
 
-/* Smooth scroll behavior for anchors */
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  color: #00ffffaa;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+/* === Smooth Scrolling === */
 html {
   scroll-behavior: smooth;
 }
