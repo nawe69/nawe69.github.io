@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Ewan Chang's Portfolio</title>
@@ -11,8 +11,7 @@
     <h1>Ewan Chang</h1>
 
     <div class="scroll-text">
-      <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student &nbsp;&nbsp;&nbsp;</span>
-      <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student &nbsp;&nbsp;&nbsp;</span>
+      <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
     </div>
 
     <nav>
@@ -26,9 +25,6 @@
 
   <section>
     <h2>Welcome!</h2>
-    <div class="card">
-      <p>Hello! I'm <strong>Ewan Chang</strong>, and this is my personal portfolio website with a classy, modern dark theme. Feel free to explore my achievements and hobbies.</p>
-    </div>
   </section>
 
   <section id="bio" class="reveal">
@@ -43,18 +39,14 @@
   </footer>
 
   <script>
-    // JS to trigger reveal animation on scroll
     const revealElements = document.querySelectorAll(".reveal");
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("revealed");
         }
       });
-    }, {
-      threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
     revealElements.forEach(el => observer.observe(el));
   </script>
