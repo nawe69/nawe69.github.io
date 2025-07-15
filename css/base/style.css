@@ -46,7 +46,7 @@ header h1 {
 .marquee {
     display: inline-block;
     white-space: nowrap;
-    animation: marqueeAnimation 18s linear infinite;
+    animation: marqueeAnimation 10s linear infinite;
 }
 
 .marquee-content span {
