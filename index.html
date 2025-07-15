@@ -20,6 +20,8 @@
       <a href="achievements.html">Achievements</a>
       <a href="hobbies.html">Hobbies</a>
     </nav>
+
+    <a href="#bio" class="scroll-down">↓ Scroll to Biography</a>
   </header>
 
   <section>
@@ -29,8 +31,32 @@
     </div>
   </section>
 
+  <section id="bio" class="reveal">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I'm Ewan Chang, a passionate student with a deep interest in technology, leadership, and innovation. I aspire to be an entrepreneur, combining my hobbies with real-world problem solving. This portfolio is a window into what I love doing and what I aim to become.</p>
+    </div>
+  </section>
+
   <footer>
     <p>© 2025 Ewan Chang</p>
   </footer>
+
+  <script>
+    // JS to trigger reveal animation on scroll
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
