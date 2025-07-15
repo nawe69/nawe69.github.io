@@ -1,67 +1,32 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background: #f9f9f9;
-  color: #333;
-  animation: fadeIn 1s ease-in;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+<header>
+  <h1>Your Name</h1>
+  <p class="scroll-text">Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="hobbies.html">Hobbies</a>
+  </nav>
+</header>
 
-header, footer {
-  background-color: #222;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
+<section>
+  <h2>Welcome!</h2>
+  <div class="card">
+    <p>Hello! I'm [Your Name], and this is my personal portfolio website. Explore my achievements, hobbies, and more!</p>
+  </div>
+</section>
 
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-}
-nav a:hover {
-  color: #00d1b2;
-}
+<footer>
+  <p>© 2025 Your Name</p>
+</footer>
 
-section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.card {
-  background: white;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.scroll-text {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  animation: scroll-left 15s linear infinite;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #00d1b2;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+</body>
+</html>
