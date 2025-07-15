@@ -21,18 +21,18 @@
         </div>
       </div>
     </div>
-
-    <nav>
-      <div class="dropdown">
-        <button class="dropbtn">Pages</button>
-        <div class="dropdown-content">
-          <a href="index.html">Home</a>
-          <a href="achievements.html">Achievements</a>
-          <a href="hobbies.html">Hobbies</a>
-        </div>
-      </div>
-    </nav>
   </header>
+
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Pages</button>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="hobbies.html">Hobbies</a>
+      </div>
+    </div>
+  </nav>
 
   <section class="welcome full-screen">
     <h2>Welcome, I'm Ewan!</h2>
@@ -55,15 +55,12 @@
     <p>© 2025 Ewan Chang</p>
   </footer>
 
+  <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  
   <script>
     particlesJS('particles-js', {
       "particles": {
-        "number": {
-          "value": 60,
-          "density": { "enable": true, "value_area": 800 }
-        },
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 }},
         "color": { "value": "#00ffff" },
         "shape": { "type": "circle" },
         "opacity": { "value": 0.15, "random": true },
@@ -92,13 +89,16 @@
           "resize": true
         },
         "modes": {
-          "grab": { "distance": 140, "line_linked": { "opacity": 0.25 } },
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.25 }},
           "push": { "particles_nb": 4 }
         }
       },
       "retina_detect": true
     });
+  </script>
 
+  <!-- Reveal on scroll -->
+  <script>
     const revealElements = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -110,13 +110,14 @@
     revealElements.forEach(el => observer.observe(el));
   </script>
 
+  <!-- Dynamic Marquee Duration -->
   <script>
     window.addEventListener('load', () => {
       const marquee = document.querySelector('.marquee');
       const marqueeContent = document.querySelector('.marquee-content');
       if (marquee && marqueeContent) {
-        const contentWidth = marqueeContent.offsetWidth / 2; // width of one copy
-        const speed = 100; // pixels per second (adjust speed here)
+        const contentWidth = marqueeContent.offsetWidth / 2;
+        const speed = 100; // pixels/sec
         const duration = contentWidth / speed;
         marquee.style.animationDuration = duration + 's';
       }
