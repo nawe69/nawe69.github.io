@@ -3,25 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <title>Hobbies - Ewan Chang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
+  <div id="particles-js"></div>
+
   <header>
     <h1>Hobbies</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="hobbies.html">Hobbies</a>
+      <div class="dropdown">
+        <button class="dropbtn">Pages</button>
+        <div class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="hobbies.html">Hobbies</a>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <section class="reveal">
+  <section class="reveal" style="max-width: 900px; margin: 3rem auto; padding: 1rem;">
     <div class="card">
       <h3>Photography</h3>
       <p>I enjoy capturing landscapes and urban life during my travels and walks.</p>
     </div>
-    <div class="card">
+    <div class="card" style="margin-top: 1.5rem;">
       <h3>Gaming</h3>
       <p>I like playing open-world, strategy, and simulation games during my free time.</p>
     </div>
@@ -31,7 +39,57 @@
     <p>© 2025 Ewan Chang</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 60,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#00ffff" },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.15,
+          "random": true
+        },
+        "size": {
+          "value": 4,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00ffff",
+          "opacity": 0.12,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.25 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+
     const revealElements = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -40,7 +98,6 @@
         }
       });
     }, { threshold: 0.1 });
-
     revealElements.forEach(el => observer.observe(el));
   </script>
 </body>
