@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Achievements - Ewan Chang</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="particles-js"></div>
-
-  <header>
-    <h1>Achievements</h1>
-    <nav>
-      <div class="dropdown">
-        <button class="dropbtn">Pages</button>
-        <div class="dropdown-content">
-          <a href="index.html">Home</a>
-          <a href="achievements.html">Achievements</a>
-          <a href="hobbies.html">Hobbies</a>
-        </div>
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Pages</button>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="hobbies.html">Hobbies</a>
       </div>
-    </nav>
-  </header>
-
-  <section class="reveal" style="max-width: 900px; margin: 3rem auto; padding: 1rem;">
-    <div class="card">
-      <h3>Top Student Award</h3>
-      <p>Received the award for academic excellence in 2024.</p>
     </div>
-    <div class="card" style="margin-top: 1.5rem;">
-      <h3>Coding Competition Winner</h3>
-      <p>Won 1st place in a school-level coding competition using Python and HTML.</p>
+  </nav>
+
+  <section class="full-screen">
+    <h2>My Achievements</h2>
+  </section>
+
+  <section class="about-section reveal">
+    <div class="about-text">
+      <h2>School Leadership</h2>
+      <p>Leader of the school Valorant team, organizing training sessions and fostering team spirit through collaboration and perseverance.</p>
+
+      <h2>Production Team Service</h2>
+      <p>Key member of my church’s production team, serving in technical roles including sound engineering, lighting, projection, and technical directing every week.</p>
+
+      <h2>Technical Excellence</h2>
+      <p>Known for high competency in PC hardware, frequently consulted by peers for building and upgrading systems, especially in watercooling setups.</p>
+
+      <h2>Academic Dedication</h2>
+      <p>Dedicated student consistently improving in Computing and Sciences, applying technical knowledge into real-world tasks and team projects.</p>
+
+      <h2>Entrepreneurial Vision</h2>
+      <p>Developed multiple business ideas and models independently, planning to pursue real-world implementation post-O Levels.</p>
     </div>
   </section>
 
@@ -39,57 +44,7 @@
     <p>© 2025 Ewan Chang</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    particlesJS('particles-js', {
-      "particles": {
-        "number": {
-          "value": 60,
-          "density": { "enable": true, "value_area": 800 }
-        },
-        "color": { "value": "#00ffff" },
-        "shape": {
-          "type": "circle"
-        },
-        "opacity": {
-          "value": 0.15,
-          "random": true
-        },
-        "size": {
-          "value": 4,
-          "random": true
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#00ffff",
-          "opacity": 0.12,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "bounce": false
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "grab" },
-          "onclick": { "enable": true, "mode": "push" },
-          "resize": true
-        },
-        "modes": {
-          "grab": { "distance": 140, "line_linked": { "opacity": 0.25 } },
-          "push": { "particles_nb": 4 }
-        }
-      },
-      "retina_detect": true
-    });
-
     const revealElements = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
