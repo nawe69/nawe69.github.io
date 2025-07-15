@@ -53,11 +53,17 @@ header h1 {
   border-top: 1px solid #00ffff44;
   border-bottom: 1px solid #00ffff44;
   padding: 0.3rem 0;
+  position: relative;
 }
 
 .marquee {
-  display: flex;
+  display: inline-block;
+  white-space: nowrap;
   animation: marqueeAnimation 20s linear infinite;
+}
+
+.marquee-content {
+  display: inline-block;
 }
 
 .marquee-content span {
@@ -70,8 +76,8 @@ header h1 {
 }
 
 @keyframes marqueeAnimation {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
 /* === Navigation === */
