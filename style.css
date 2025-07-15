@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
   position: relative;
   z-index: 1;
-  padding-top: 70px; /* space for fixed nav */
+  padding-top: 70px;
 }
 
 #particles-js {
@@ -53,13 +53,11 @@ footer p {
   font-size: 1rem;
 }
 
-/* Dropdown nav fixed top-left */
 nav {
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 20;
-  margin: 0;
 }
 
 .dropbtn {
@@ -116,13 +114,12 @@ nav {
 .marquee-container {
   width: 100%;
   overflow: hidden;
+  white-space: nowrap;
   box-sizing: border-box;
   position: relative;
   user-select: none;
-  margin: 1.5rem 0;
-  z-index: 2;
   background-color: transparent;
-  white-space: nowrap;
+  margin: 1.5rem 0;
 }
 
 .marquee {
@@ -130,7 +127,6 @@ nav {
   white-space: nowrap;
   will-change: transform;
   animation: marqueeAnimation linear infinite;
-  /* animation-duration set by JS */
 }
 
 .marquee-content {
@@ -141,20 +137,15 @@ nav {
 .marquee-content span {
   display: inline-block;
   padding-right: 2rem;
-  font-weight: 600;
-  font-style: italic;
   font-size: 1.3rem;
+  font-weight: 600;
   color: #bbb;
-  font-family: 'Poppins', sans-serif;
+  font-style: italic;
 }
 
 @keyframes marqueeAnimation {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .scroll-down {
@@ -246,11 +237,52 @@ nav {
   border-radius: 6px;
 }
 
+.scroll-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #181818cc;
+  margin-top: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ffff22;
+}
+
+.scroll-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffff;
+  text-shadow: 0 0 6px #00ffff99;
+}
+
+.scroll-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn {
+  background-color: #00ffffcc;
+  color: #121212;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 12px #00ffff55;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00e6e6;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffffaa;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(60px);
   transition: opacity 1.4s ease-out, transform 1.4s ease-out;
-  will-change: opacity, transform;
 }
 
 .revealed {
