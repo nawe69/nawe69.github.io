@@ -45,3 +45,23 @@ section {
 .card:hover {
   transform: translateY(-5px);
 }
+
+.scroll-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: scroll-left 15s linear infinite;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #00d1b2;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
