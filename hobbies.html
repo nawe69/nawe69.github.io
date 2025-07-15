@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Hobbies - Ewan Chang</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="particles-js"></div>
-
-  <header>
-    <h1>Hobbies</h1>
-    <nav>
-      <div class="dropdown">
-        <button class="dropbtn">Pages</button>
-        <div class="dropdown-content">
-          <a href="index.html">Home</a>
-          <a href="achievements.html">Achievements</a>
-          <a href="hobbies.html">Hobbies</a>
-        </div>
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Pages</button>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="hobbies.html">Hobbies</a>
       </div>
-    </nav>
-  </header>
-
-  <section class="reveal" style="max-width: 900px; margin: 3rem auto; padding: 1rem;">
-    <div class="card">
-      <h3>Photography</h3>
-      <p>I enjoy capturing landscapes and urban life during my travels and walks.</p>
     </div>
-    <div class="card" style="margin-top: 1.5rem;">
-      <h3>Gaming</h3>
-      <p>I like playing open-world, strategy, and simulation games during my free time.</p>
+  </nav>
+
+  <section class="full-screen">
+    <h2>My Hobbies</h2>
+  </section>
+
+  <section class="about-section reveal">
+    <div class="about-text">
+      <h2>Entrepreneurship</h2>
+      <p>I like thinking of business ideas and models and I already have multiple ideas I would like to bring to reality in the future.</p>
+
+      <h2>PC Building</h2>
+      <p>I have a very deep interest and passion for PC hardware and building them. I really enjoy reading up on PC watercooling and hardware news.</p>
+
+      <h2>Gaming</h2>
+      <p>I enjoy playing games such as Valorant, Ultrakill, and Minecraft. These games help me take my mind off school stress. I also lead a Valorant team in school.</p>
+
+      <h2>Production</h2>
+      <p>I serve in the production team in my church and love my roles as sound engineer, lights operator, projectionist, and technical director.</p>
+
+      <h2>Music</h2>
+      <p>I have a keen taste in genres like rock and punk, which energize and inspire me.</p>
+
+      <h2>Sports</h2>
+      <p>I enjoy volleyball, swimming, golf, and badminton. These keep me active and balanced.</p>
     </div>
   </section>
 
@@ -39,57 +47,7 @@
     <p>© 2025 Ewan Chang</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    particlesJS('particles-js', {
-      "particles": {
-        "number": {
-          "value": 60,
-          "density": { "enable": true, "value_area": 800 }
-        },
-        "color": { "value": "#00ffff" },
-        "shape": {
-          "type": "circle"
-        },
-        "opacity": {
-          "value": 0.15,
-          "random": true
-        },
-        "size": {
-          "value": 4,
-          "random": true
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#00ffff",
-          "opacity": 0.12,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "bounce": false
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "grab" },
-          "onclick": { "enable": true, "mode": "push" },
-          "resize": true
-        },
-        "modes": {
-          "grab": { "distance": 140, "line_linked": { "opacity": 0.25 } },
-          "push": { "particles_nb": 4 }
-        }
-      },
-      "retina_detect": true
-    });
-
     const revealElements = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
