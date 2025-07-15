@@ -15,7 +15,6 @@ body {
   z-index: 1;
 }
 
-/* Particle background */
 #particles-js {
   position: fixed;
   top: 0;
@@ -40,7 +39,6 @@ footer p {
   font-size: 1rem;
 }
 
-/* Navigation Dropdown */
 nav {
   margin-top: 1rem;
   position: relative;
@@ -98,23 +96,24 @@ nav {
   display: block;
 }
 
-/* Marquee styles */
 .marquee-container {
   width: 100%;
   overflow: hidden;
-  white-space: nowrap;
   box-sizing: border-box;
   position: relative;
-  background-color: transparent;
   user-select: none;
   margin: 1.5rem 0;
   z-index: 2;
+  background-color: transparent;
+  white-space: nowrap;
 }
 
 .marquee {
-  display: flex;
+  display: inline-block;
   white-space: nowrap;
-  animation: marqueeAnimation 16s linear infinite;
+  will-change: transform;
+  animation: marqueeAnimation linear infinite;
+  /* animation-duration will be set dynamically by JS */
 }
 
 .marquee-content {
@@ -141,7 +140,6 @@ nav {
   }
 }
 
-/* Scroll Down Button */
 .scroll-down {
   display: inline-block;
   margin-top: 2rem;
@@ -157,14 +155,13 @@ nav {
   color: #00ffff;
 }
 
-/* Full-screen Welcome */
 .full-screen {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: transparent; /* particles show through */
+  background-color: transparent;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -177,7 +174,6 @@ nav {
   text-shadow: 0 0 8px #00ffffaa;
 }
 
-/* About Section with Image */
 .about-section {
   display: flex;
   flex-wrap: wrap;
@@ -224,7 +220,6 @@ nav {
   box-shadow: 0 0 30px #00ffffee;
 }
 
-/* Highlight certain words */
 .highlight {
   color: #00ffff;
   font-weight: 600;
@@ -233,7 +228,6 @@ nav {
   border-radius: 6px;
 }
 
-/* Smooth Reveal Animation */
 .reveal {
   opacity: 0;
   transform: translateY(60px);
