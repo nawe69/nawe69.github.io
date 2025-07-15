@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Achievements - Ewan Chang</title>
@@ -16,19 +16,32 @@
     </nav>
   </header>
 
-  <section>
+  <section class="reveal">
     <div class="card">
       <h3>Top Student Award</h3>
       <p>Received the award for academic excellence in 2024.</p>
     </div>
     <div class="card">
       <h3>Coding Competition Winner</h3>
-      <p>Won 1st place in [Competition Name] using Python and HTML.</p>
+      <p>Won 1st place in a school-level coding competition using Python and HTML.</p>
     </div>
   </section>
 
   <footer>
     <p>© 2025 Ewan Chang</p>
   </footer>
+
+  <script>
+    const revealElements = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
