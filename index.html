@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ewan Chang's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
+  <!-- Particle background container -->
+  <div id="particles-js"></div>
+
   <header>
     <h1>Ewan Chang</h1>
 
@@ -34,7 +38,9 @@
   <section id="bio" class="reveal about-section">
     <div class="about-text">
       <h2>About Me</h2>
-      <p>I'm Ewan Chang, a passionate student with a deep interest in technology, leadership, and innovation. I aspire to be an entrepreneur, combining my hobbies with real-world problem solving. This portfolio is a window into what I love doing and what I aim to become.</p>
+      <p>
+        I'm <span class="highlight">Ewan Chang</span>, a passionate student with a deep interest in <span class="highlight">technology</span>, <span class="highlight">leadership</span>, and <span class="highlight">innovation</span>. I aspire to be an <span class="highlight">entrepreneur</span>, combining my hobbies with real-world problem solving. This portfolio is a window into what I love doing and what I aim to become.
+      </p>
     </div>
     <div class="about-image">
       <img src="your-photo.jpg" alt="Ewan Chang" />
@@ -45,7 +51,63 @@
     <p>© 2025 Ewan Chang</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
+    /* Particle config */
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 60,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#00ffff" },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" },
+        },
+        "opacity": {
+          "value": 0.15,
+          "random": true,
+          "anim": { "enable": false }
+        },
+        "size": {
+          "value": 4,
+          "random": true,
+          "anim": { "enable": false }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00ffff",
+          "opacity": 0.12,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "bounce": false,
+          "attract": { "enable": false }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.25 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+
+    /* Reveal animations */
     const revealElements = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -54,7 +116,6 @@
         }
       });
     }, { threshold: 0.1 });
-
     revealElements.forEach(el => observer.observe(el));
   </script>
 </body>
