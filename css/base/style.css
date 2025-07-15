@@ -239,6 +239,41 @@ header h1 {
     line-height: 1.4;
 }
 
+.achievement-cell {
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px #00ffff33;
+    transition: box-shadow 0.3s ease;
+    color: #ccc;
+    text-align: center;
+    cursor: pointer;
+}
+
+.achievement-details {
+    max-height: 0;
+    margin-top: 0rem;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.achievement-details img {
+    margin-top: 1rem;
+    height: auto;
+    border-radius: 20px;
+}
+
+.achievement-cell.open .fa-chevron-down {
+    opacity: 0;
+}
+
+.achievement-cell.open .achievement-details {
+    max-height: 500px;
+    visibility: visible;
+    opacity: 1;
+}
+
 /* === Circle Button === */
 .circle-btn {
     display: inline-flex;
