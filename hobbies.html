@@ -2,52 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hobbies - Ewan Chang</title>
-  <link rel="stylesheet" href="style.css">
+  <title>My Hobbies | Ewan Chang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="header-content">
+      <h1>My Hobbies</h1>
+      <div class="marquee-container">
+        <div class="marquee">
+          <div class="marquee-content">
+            <span>Passionate about technology, gaming, and creative pursuits • </span>
+            <span>Passionate about technology, gaming, and creative pursuits • </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <nav>
-    <div class="dropdown">
-      <button class="dropbtn">Pages</button>
-      <div class="dropdown-content">
-        <a href="index.html">Home</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="hobbies.html">Hobbies</a>
+    <div class="nav-container">
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-bars"></i> Menu</button>
+        <div class="dropdown-content">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a>
+          <a href="hobbies.html"><i class="fas fa-gamepad"></i> Hobbies</a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <section class="full-screen">
-    <h2>My Hobbies</h2>
-  </section>
+  <main class="hobbies-main">
+    <section class="hobby-section reveal">
+      <div class="hobby-card">
+        <div class="hobby-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="hobby-content">
+          <h2>Entrepreneurship</h2>
+          <p>I constantly brainstorm business ideas and models, with several concepts I plan to bring to reality in the future. I enjoy analyzing market trends and developing innovative solutions to real-world problems.</p>
+        </div>
+      </div>
 
-  <section class="about-section reveal">
-    <div class="about-text">
-      <h2>Entrepreneurship</h2>
-      <p>I like thinking of business ideas and models and I already have multiple ideas I would like to bring to reality in the future.</p>
+      <div class="hobby-card">
+        <div class="hobby-icon">
+          <i class="fas fa-desktop"></i>
+        </div>
+        <div class="hobby-content">
+          <h2>PC Building</h2>
+          <p>I have an intense passion for PC hardware and building systems. My expertise extends to custom watercooling setups, and I stay updated with the latest hardware news and technological advancements in the industry.</p>
+        </div>
+      </div>
 
-      <h2>PC Building</h2>
-      <p>I have a very deep interest and passion for PC hardware and building them. I really enjoy reading up on PC watercooling and hardware news.</p>
+      <div class="hobby-card">
+        <div class="hobby-icon">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <div class="hobby-content">
+          <h2>Gaming</h2>
+          <p>I enjoy competitive and creative games like Valorant, Ultrakill, and Minecraft. These provide both stress relief and opportunities to develop strategic thinking. As the leader of my school's Valorant team, I organize training sessions and foster teamwork.</p>
+        </div>
+      </div>
 
-      <h2>Gaming</h2>
-      <p>I enjoy playing games such as Valorant, Ultrakill, and Minecraft. These games help me take my mind off school stress. I also lead a Valorant team in school.</p>
+      <div class="hobby-card">
+        <div class="hobby-icon">
+          <i class="fas fa-sliders-h"></i>
+        </div>
+        <div class="hobby-content">
+          <h2>Production</h2>
+          <p>I serve in my church's production team, taking on various technical roles including sound engineering, lighting operation, projection, and technical directing. This weekly commitment allows me to combine technical skills with creative expression.</p>
+        </div>
+      </div>
 
-      <h2>Production</h2>
-      <p>I serve in the production team in my church and love my roles as sound engineer, lights operator, projectionist, and technical director.</p>
+      <div class="hobby-card">
+        <div class="hobby-icon">
+          <i class="fas fa-music"></i>
+        </div>
+        <div class="hobby-content">
+          <h2>Music</h2>
+          <p>I have a keen appreciation for rock and punk genres, which energize and inspire me. Music serves as both a creative outlet and a source of motivation during work and study sessions.</p>
+        </div>
+      </div>
 
-      <h2>Music</h2>
-      <p>I have a keen taste in genres like rock and punk, which energize and inspire me.</p>
-
-      <h2>Sports</h2>
-      <p>I enjoy volleyball, swimming, golf, and badminton. These keep me active and balanced.</p>
-    </div>
-  </section>
+      <div class="hobby-card">
+        <div class="hobby-icon">
+          <i class="fas fa-volleyball-ball"></i>
+        </div>
+        <div class="hobby-content">
+          <h2>Sports</h2>
+          <p>I enjoy staying active through volleyball, swimming, golf, and badminton. These activities help maintain physical health while providing balance to my tech-focused pursuits.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Ewan Chang</p>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p>© 2025 Ewan Chang. All rights reserved.</p>
+    </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 }},
+        "color": { "value": "#00ffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.15, "random": true },
+        "size": { "value": 4, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00ffff",
+          "opacity": 0.12,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.25 }},
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+
+    // Intersection Observer for reveal animations
     const revealElements = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -56,6 +163,7 @@
         }
       });
     }, { threshold: 0.1 });
+    
     revealElements.forEach(el => observer.observe(el));
   </script>
 </body>
