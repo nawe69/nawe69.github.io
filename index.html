@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-  <!-- Particle background container -->
   <div id="particles-js"></div>
 
   <header>
@@ -17,8 +16,6 @@
     <div class="marquee-container">
       <div class="marquee">
         <div class="marquee-content">
-          <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
-          <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
           <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
           <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
         </div>
@@ -59,8 +56,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  
   <script>
-    /* Particle config */
     particlesJS('particles-js', {
       "particles": {
         "number": {
@@ -68,17 +65,9 @@
           "density": { "enable": true, "value_area": 800 }
         },
         "color": { "value": "#00ffff" },
-        "shape": {
-          "type": "circle"
-        },
-        "opacity": {
-          "value": 0.15,
-          "random": true
-        },
-        "size": {
-          "value": 4,
-          "random": true
-        },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.15, "random": true },
+        "size": { "value": 4, "random": true },
         "line_linked": {
           "enable": true,
           "distance": 150,
@@ -110,7 +99,6 @@
       "retina_detect": true
     });
 
-    /* Reveal animations */
     const revealElements = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -120,6 +108,19 @@
       });
     }, { threshold: 0.1 });
     revealElements.forEach(el => observer.observe(el));
+  </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      const marquee = document.querySelector('.marquee');
+      const marqueeContent = document.querySelector('.marquee-content');
+      if (marquee && marqueeContent) {
+        const contentWidth = marqueeContent.offsetWidth / 2; // width of one copy
+        const speed = 100; // pixels per second (adjust speed here)
+        const duration = contentWidth / speed;
+        marquee.style.animationDuration = duration + 's';
+      }
+    });
   </script>
 </body>
 </html>
