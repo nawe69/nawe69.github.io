@@ -72,7 +72,6 @@
     </div>
     <div class="about-image">
       <img src="your-photo.jpg" alt="Ewan Chang" />
-      <div class="image-border"></div>
     </div>
   </section>
 
@@ -178,7 +177,6 @@
       "retina_detect": true
     });
 
-    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -188,7 +186,6 @@
       });
     });
 
-    // Intersection Observer for reveal animations
     const revealElements = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -197,7 +194,7 @@
         }
       });
     }, { threshold: 0.1 });
-    
+
     revealElements.forEach(el => observer.observe(el));
   </script>
 </body>
