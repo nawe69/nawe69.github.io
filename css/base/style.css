@@ -1,0 +1,301 @@
+/* === Particles Background === */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* === Header === */
+header {
+    position: relative;
+    z-index: 10;
+    padding: 1rem 2rem;
+    background: rgba(18, 18, 18, 0.9);
+    box-shadow: 0 2px 8px #00ffff44;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+header h1 {
+    color: #00ffff;
+    font-weight: 600;
+    font-size: 2.8rem;
+    text-shadow: 0 0 8px #00ffffaa;
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+
+/* === Marquee === */
+.marquee-container {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 1px solid #00ffff44;
+    border-bottom: 1px solid #00ffff44;
+    padding: 0.3rem 0;
+    position: relative;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marqueeAnimation 20s linear infinite;
+}
+
+.marquee-content span {
+    display: inline-block;
+    padding-right: 40px;
+    color: #00ffffcc;
+    font-weight: 600;
+    text-shadow: 0 0 6px #00ffff88;
+    font-size: 1.1rem;
+}
+
+@keyframes marqueeAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* === Welcome Section === */
+.full-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #00ffff;
+    font-weight: 600;
+    font-size: 3.8rem;
+    text-shadow: 0 0 18px #00ffffaa;
+    position: relative;
+    z-index: 2;
+}
+
+.scroll-down {
+    margin-top: 1.5rem;
+    font-size: 2.8rem;
+    color: #00ffffcc;
+    cursor: pointer;
+    animation: bounce 2.5s infinite;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.scroll-down:hover {
+    color: #00ffffee;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(12px);
+    }
+}
+
+/* === About Section === */
+.about-section {
+    margin: 3rem 5rem;
+    backdrop-filter: blur(5px);
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px #00ffff44;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-section.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: #00ffff;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 6px #00ffff99;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #00ffffdd;
+    font-weight: 600;
+}
+
+.quick-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.fact {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    color: #00ffffcc;
+    border: 2px solid #00ffff44;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    box-shadow: 0 0 10px #00ffff44;
+}
+
+.about-image {
+    flex-shrink: 0;
+    max-width: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #00ffff55;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* === Preview Sections (Hobbies & Achievements) === */
+.preview-section {
+    margin: 3rem 5rem;
+    backdrop-filter: blur(5px);
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px #00ffff44;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.preview-section.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.preview-section h2 {
+    color: #00ffff;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-shadow: 0 0 6px #00ffff99;
+}
+
+.preview-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.preview-cell {
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    width: 280px;
+    box-shadow: 0 0 10px #00ffff33;
+    transition: box-shadow 0.3s ease;
+    color: #ccc;
+    text-align: left;
+}
+
+.preview-cell:hover {
+    box-shadow: 0 0 18px #00ffffaa;
+}
+
+.preview-cell h3 {
+    color: #00ffff;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.preview-cell p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* === Circle Button === */
+.circle-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00ffffcc;
+    color: #121212;
+    width: 100px;
+    height: 100px;
+    margin-top: 2rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 14px #00ffff55;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    gap: 0.3rem;
+}
+
+.circle-btn:hover {
+    background-color: #00e6e6;
+    transform: scale(1.15);
+    box-shadow: 0 0 25px #00ffffaa;
+}
+
+/* === Hobby Cards (for hobbies.html) === */
+.hobby-section {
+    margin: 3rem 5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hobby-section.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hobby-card {
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 16px #00ffff33;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    color: #ccc;
+}
+
+.hobby-icon {
+    font-size: 2.5rem;
+    color: #00ffff;
+    margin-top: 0.3rem;
+}
+
+/* === Smooth Scrolling === */
+html {
+    scroll-behavior: smooth;
+}
