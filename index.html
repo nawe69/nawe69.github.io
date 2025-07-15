@@ -12,12 +12,9 @@
 
   <header>
     <h1>Ewan Chang</h1>
-
     <div class="marquee-container">
       <div class="marquee">
         <div class="marquee-content">
-          <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
-          <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
           <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
           <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
         </div>
@@ -53,11 +50,18 @@
     </div>
   </section>
 
+  <section class="scroll-section reveal">
+    <h2>Interested in what I do?</h2>
+    <div class="scroll-buttons">
+      <a href="hobbies.html" class="btn">🎮 Check Out My Hobbies</a>
+      <a href="achievements.html" class="btn">🏆 View My Achievements</a>
+    </div>
+  </section>
+
   <footer>
     <p>© 2025 Ewan Chang</p>
   </footer>
 
-  <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
     particlesJS('particles-js', {
@@ -99,7 +103,6 @@
     });
   </script>
 
-  <!-- Reveal on scroll -->
   <script>
     const revealElements = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
@@ -112,14 +115,13 @@
     revealElements.forEach(el => observer.observe(el));
   </script>
 
-  <!-- Dynamic Marquee Speed -->
   <script>
     window.addEventListener('load', () => {
       const marquee = document.querySelector('.marquee');
       const content = document.querySelector('.marquee-content');
       if (marquee && content) {
         const width = content.offsetWidth / 2;
-        const speed = 100; // pixels per second
+        const speed = 100;
         const duration = width / speed;
         marquee.style.animationDuration = `${duration}s`;
       }
