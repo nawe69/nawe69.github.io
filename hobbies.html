@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Hobbies - Ewan Chang</title>
@@ -16,19 +16,32 @@
     </nav>
   </header>
 
-  <section>
+  <section class="reveal">
     <div class="card">
       <h3>Photography</h3>
-      <p>I enjoy taking landscape and street photos during my travels.</p>
+      <p>I enjoy capturing landscapes and urban life during my travels and walks.</p>
     </div>
     <div class="card">
       <h3>Gaming</h3>
-      <p>I like playing strategic and open-world games during my free time.</p>
+      <p>I like playing open-world, strategy, and simulation games during my free time.</p>
     </div>
   </section>
 
   <footer>
     <p>© 2025 Ewan Chang</p>
   </footer>
+
+  <script>
+    const revealElements = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
