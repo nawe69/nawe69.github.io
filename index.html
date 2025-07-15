@@ -110,16 +110,16 @@
     revealElements.forEach(el => observer.observe(el));
   </script>
 
-  <!-- Dynamic Marquee Duration -->
+  <!-- Dynamic Marquee Speed -->
   <script>
     window.addEventListener('load', () => {
       const marquee = document.querySelector('.marquee');
-      const marqueeContent = document.querySelector('.marquee-content');
-      if (marquee && marqueeContent) {
-        const contentWidth = marqueeContent.offsetWidth / 2;
-        const speed = 100; // pixels/sec
-        const duration = contentWidth / speed;
-        marquee.style.animationDuration = duration + 's';
+      const content = document.querySelector('.marquee-content');
+      if (marquee && content) {
+        const width = content.offsetWidth / 2;
+        const speed = 100; // pixels per second
+        const duration = width / speed;
+        marquee.style.animationDuration = `${duration}s`;
       }
     });
   </script>
