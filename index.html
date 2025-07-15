@@ -17,6 +17,8 @@
         <div class="marquee-content">
           <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
           <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
+          <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
+          <span>Aspiring Entrepreneur | PC Nerd | Team Leader | Hobbyist | Student • </span>
         </div>
       </div>
     </div>
@@ -27,8 +29,6 @@
       <button class="dropbtn">Pages</button>
       <div class="dropdown-content">
         <a href="index.html">Home</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="hobbies.html">Hobbies</a>
       </div>
     </div>
   </nav>
@@ -50,11 +50,50 @@
     </div>
   </section>
 
-  <section class="scroll-section reveal">
-    <h2>Interested in what I do?</h2>
-    <div class="scroll-buttons">
-      <a href="hobbies.html" class="btn">🎮 Check Out My Hobbies</a>
-      <a href="achievements.html" class="btn">🏆 View My Achievements</a>
+  <section id="hobbies" class="about-section reveal">
+    <h2>Hobbies</h2>
+    <div class="about-text">
+      <h3>Entrepreneurship</h3>
+      <p>I like thinking of business ideas and models and I already have multiple ideas I would like to bring to reality in the future.</p>
+
+      <h3>PC Building</h3>
+      <p>I have a very deep interest and passion for PC hardware and building them. I really enjoy reading up on PC watercooling and hardware news.</p>
+
+      <h3>Gaming</h3>
+      <p>I enjoy playing games such as Valorant, Ultrakill, and Minecraft. These games help me take my mind off school stress. I also lead a Valorant team in school.</p>
+
+      <h3>Production</h3>
+      <p>I serve in the production team in my church and love my roles as sound engineer, lights operator, projectionist, and technical director.</p>
+
+      <h3>Music</h3>
+      <p>I have a keen taste in genres like rock and punk, which energize and inspire me.</p>
+
+      <h3>Sports</h3>
+      <p>I enjoy volleyball, swimming, golf, and badminton. These keep me active and balanced.</p>
+
+      <a href="hobbies.html" class="btn">Read More About My Hobbies</a>
+    </div>
+  </section>
+
+  <section id="achievements" class="about-section reveal">
+    <h2>Achievements</h2>
+    <div class="about-text">
+      <h3>School Leadership</h3>
+      <p>Leader of the school Valorant team, organizing training sessions and fostering team spirit through collaboration and perseverance.</p>
+
+      <h3>Production Team Service</h3>
+      <p>Key member of my church’s production team, serving in technical roles including sound engineering, lighting, projection, and technical directing every week.</p>
+
+      <h3>Technical Excellence</h3>
+      <p>Known for high competency in PC hardware, frequently consulted by peers for building and upgrading systems, especially in watercooling setups.</p>
+
+      <h3>Academic Dedication</h3>
+      <p>Dedicated student consistently improving in Computing and Sciences, applying technical knowledge into real-world tasks and team projects.</p>
+
+      <h3>Entrepreneurial Vision</h3>
+      <p>Developed multiple business ideas and models independently, planning to pursue real-world implementation post-O Levels.</p>
+
+      <a href="achievements.html" class="btn">Read More About My Achievements</a>
     </div>
   </section>
 
@@ -113,19 +152,6 @@
       });
     }, { threshold: 0.1 });
     revealElements.forEach(el => observer.observe(el));
-  </script>
-
-  <script>
-    window.addEventListener('load', () => {
-      const marquee = document.querySelector('.marquee');
-      const content = document.querySelector('.marquee-content');
-      if (marquee && content) {
-        const width = content.offsetWidth / 2;
-        const speed = 100;
-        const duration = width / speed;
-        marquee.style.animationDuration = `${duration}s`;
-      }
-    });
   </script>
 </body>
 </html>
