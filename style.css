@@ -1,3 +1,59 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  background-color: #121212;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  padding-top: 70px; /* space for fixed nav */
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: #121212;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid #333;
+  background-color: #1f1f1fcc;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: #1f1f1fcc;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid #333;
+  position: relative;
+  z-index: 2;
+}
+
+footer p {
+  color: #888;
+  font-size: 1rem;
+}
+
 /* Move nav to top-left, fixed position */
 nav {
   position: fixed;
@@ -7,33 +63,198 @@ nav {
   margin: 0;
 }
 
-/* Remove dropdown margin from header (header stays centered) */
-header h1 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+.dropbtn {
+  background-color: #1f1f1f;
+  color: #cfcfcf;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-/* About section closer to top */
-.about-section {
-  margin: 1rem auto 3rem auto; /* top margin reduced from 3rem to 1rem */
-  padding: 2rem;
-  max-width: 1000px;
-  /* keep other styles same */
+.dropbtn:hover {
+  background-color: #00ffffcc;
+  color: #121212;
 }
 
-/* Adjust full-screen welcome height so About is higher after scrolling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2a2a2acc;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  z-index: 30;
+}
+
+.dropdown-content a {
+  color: #ddd;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #00ffffcc;
+  color: #121212;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  user-select: none;
+  margin: 1.5rem 0;
+  z-index: 2;
+  background-color: transparent;
+  white-space: nowrap;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marqueeAnimation linear infinite;
+  /* animation-duration will be set dynamically by JS */
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.marquee-content span {
+  display: inline-block;
+  padding-right: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #bbb;
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes marqueeAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-down {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.scroll-down:hover {
+  color: #00ffff;
+}
+
 .full-screen {
-  height: 80vh; /* reduce from 100vh so scroll lands About higher */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* reduced height for About Me to appear higher */
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  z-index: 2;
   padding-top: 2rem;
 }
 
-/* Add some top padding to body so fixed nav doesn't overlap content */
-body {
-  padding-top: 70px; /* space for fixed nav */
+.full-screen h2 {
+  font-size: 3.5rem;
+  color: #00ffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px #00ffffaa;
 }
 
-/* Optional: shrink dropdown button to fit nicely top-left */
-.dropbtn {
-  padding: 0.4rem 0.8rem;
-  font-size: 1rem;
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 1rem auto 3rem auto; /* reduced top margin */
+  padding: 2rem;
+  background-color: #1a1a1acc;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00ffff33;
+  position: relative;
+  z-index: 2;
+}
+
+.about-text {
+  flex: 1 1 400px;
+  color: #eee;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.about-text h2 {
+  color: #00ffff;
+  text-shadow: 0 0 6px #00ffff99;
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffffaa;
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00ffffee;
+}
+
+.highlight {
+  color: #00ffff;
+  font-weight: 600;
+  background: rgba(0, 255, 255, 0.15);
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.4s ease-out, transform 1.4s ease-out;
+  will-change: opacity, transform;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
