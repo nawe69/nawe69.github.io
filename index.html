@@ -15,22 +15,29 @@
     </div>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="hobbies.html">Hobbies</a>
+      <div class="dropdown">
+        <button class="dropbtn">Pages</button>
+        <div class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="hobbies.html">Hobbies</a>
+        </div>
+      </div>
     </nav>
-
-    <a href="#bio" class="scroll-down">↓ Scroll to Biography</a>
   </header>
 
-  <section>
-    <h2>Welcome!</h2>
+  <section class="welcome full-screen">
+    <h2>Welcome, I'm Ewan!</h2>
+    <a href="#bio" class="scroll-down">↓ Scroll to About Me</a>
   </section>
 
-  <section id="bio" class="reveal">
-    <h2>About Me</h2>
-    <div class="card">
+  <section id="bio" class="reveal about-section">
+    <div class="about-text">
+      <h2>About Me</h2>
       <p>I'm Ewan Chang, a passionate student with a deep interest in technology, leadership, and innovation. I aspire to be an entrepreneur, combining my hobbies with real-world problem solving. This portfolio is a window into what I love doing and what I aim to become.</p>
+    </div>
+    <div class="about-image">
+      <img src="your-photo.jpg" alt="Ewan Chang" />
     </div>
   </section>
 
