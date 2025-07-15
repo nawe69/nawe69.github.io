@@ -1,62 +1,74 @@
+/* Dark Cyber Background */
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #f9f9f9;
-  color: #333;
-  animation: fadeIn 1s ease-in;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #00ffe7;
+  overflow-x: hidden;
+  animation: fadeIn 1.5s ease-in;
 }
 
+/* Fade-in on load */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-header, footer {
-  background-color: #222;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+/* Neon Glow Effect */
+.neon-glow {
+  text-shadow:
+    0 0 5px #00fff7,
+    0 0 10px #00fff7,
+    0 0 20px #00fff7,
+    0 0 40px #00fff7;
 }
 
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-}
-nav a:hover {
-  color: #00d1b2;
-}
-
-section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.card {
-  background: white;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
+/* Flicker Animation for header */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 8px #00ffe7,
+      0 0 20px #00ffe7,
+      0 0 30px #00ffe7,
+      0 0 40px #00ffe7,
+      0 0 50px #00ffe7;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.6;
+    text-shadow: none;
+  }
 }
 
+.flicker {
+  animation: flicker 3s infinite;
+  font-weight: 900;
+  font-size: 3rem;
+  margin: 0.2rem 0;
+  user-select: none;
+}
+
+/* Scroll text with neon glow */
 .scroll-text {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
   animation: scroll-left 15s linear infinite;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #00d1b2;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #00fff7;
+  margin-bottom: 1rem;
+  user-select: none;
 }
 
+/* Scrolling animation */
 @keyframes scroll-left {
   0% {
     transform: translateX(100%);
@@ -65,3 +77,90 @@ section {
     transform: translateX(-100%);
   }
 }
+
+/* Header and footer styles */
+header, footer {
+  background-color: #111;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #00fff7;
+  border-top: 1px solid #00fff7;
+}
+
+/* Nav styles with animated underline */
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #00fff7;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #00fff7;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #00ffea;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+/* Section styling */
+section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(0, 255, 231, 0.05);
+  border-radius: 10px;
+  box-shadow:
+    0 0 10px #00fff7aa,
+    inset 0 0 15px #00fff7aa;
+  color: #a0f4e9;
+  user-select: text;
+}
+
+/* Card style with subtle glow */
+.card {
+  background: rgba(0, 255, 231, 0.15);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  box-shadow:
+    0 0 12px #00fff7cc,
+    inset 0 0 15px #00fff7cc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 25px #00fff7ff,
+    inset 0 0 25px #00fff7ff;
+}
+
+/* Footer text */
+footer p {
+  margin: 0;
+  font-weight: 500;
+  color: #008a8f;
+}
+
