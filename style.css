@@ -1,21 +1,38 @@
 html {
   scroll-behavior: smooth;
+  height: 100%;
+  background-color: #121212;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: 'Times New Roman', Times, serif;
-  background-color: #121212;
   color: #e0e0e0;
   font-size: 1.2rem;
-  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Particle background covers full viewport */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: #121212;
 }
 
 header, footer {
-  background-color: #1f1f1f;
+  background-color: #1f1f1fcc;
   padding: 2rem 1rem;
   text-align: center;
   border-bottom: 1px solid #333;
+  position: relative;
+  z-index: 2;
 }
 
 footer p {
@@ -26,6 +43,8 @@ footer p {
 /* Navigation Dropdown */
 nav {
   margin-top: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .dropbtn {
@@ -35,7 +54,14 @@ nav {
   font-size: 1.1rem;
   border: none;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+  background-color: #00ffffcc;
+  color: #121212;
 }
 
 .dropdown {
@@ -46,10 +72,11 @@ nav {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #2a2a2a;
+  background-color: #2a2a2acc;
   min-width: 160px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  z-index: 1;
+  border-radius: 8px;
+  z-index: 10;
 }
 
 .dropdown-content a {
@@ -57,18 +84,18 @@ nav {
   padding: 12px 16px;
   display: block;
   text-decoration: none;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-  background-color: #3a3a3a;
+  background-color: #00ffffcc;
+  color: #121212;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropdown:hover .dropbtn {
-  color: white;
 }
 
 /* Infinite Scroll Text */
@@ -84,6 +111,7 @@ nav {
   font-style: italic;
   height: 2em;
   position: relative;
+  z-index: 2;
 }
 
 .scroll-text span {
@@ -105,10 +133,12 @@ nav {
   color: #aaa;
   text-decoration: none;
   transition: color 0.3s ease;
+  z-index: 2;
+  position: relative;
 }
 
 .scroll-down:hover {
-  color: #fff;
+  color: #00ffff;
 }
 
 /* Full-screen Welcome */
@@ -118,14 +148,17 @@ nav {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #1a1a1a;
+  background-color: transparent; /* particles show through */
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .full-screen h2 {
   font-size: 3.5rem;
-  color: #ddd;
+  color: #00ffff;
   margin-bottom: 1rem;
+  text-shadow: 0 0 8px #00ffffaa;
 }
 
 /* About Section with Image */
@@ -138,10 +171,24 @@ nav {
   max-width: 1000px;
   margin: 3rem auto;
   padding: 2rem;
+  background-color: #1a1a1acc;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00ffff33;
+  position: relative;
+  z-index: 2;
 }
 
 .about-text {
   flex: 1 1 400px;
+  color: #eee;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.about-text h2 {
+  color: #00ffff;
+  text-shadow: 0 0 6px #00ffff99;
+  margin-bottom: 1rem;
 }
 
 .about-image {
@@ -151,8 +198,14 @@ nav {
 
 .about-image img {
   max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(255,255,255,0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffffaa;
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00ffffee;
 }
 
 /* Cards (shared style) */
@@ -161,9 +214,23 @@ nav {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  transition: box-shadow 0.3s ease;
 }
 
-/* Smooth Reveal */
+.card:hover {
+  box-shadow: 0 0 20px #00ffffaa;
+}
+
+/* Highlight certain words */
+.highlight {
+  color: #00ffff;
+  font-weight: 600;
+  background: rgba(0, 255, 255, 0.15);
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+}
+
+/* Smooth Reveal Animation */
 .reveal {
   opacity: 0;
   transform: translateY(60px);
